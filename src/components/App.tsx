@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import reactLogo from '../assets/react.svg';
+import { JsonEditor } from './JsonEditor';
 import './App.css';
 
 export const App = () => {
@@ -7,6 +8,16 @@ export const App = () => {
 
   return (
     <div className="App">
+      <div>
+        <JsonEditor
+          json={{
+            key: 'value',
+            nested: {
+              key: 'value',
+            },
+          }}
+        />
+      </div>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
